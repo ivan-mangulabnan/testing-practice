@@ -16,4 +16,10 @@ describe("Reverse String function", () => {
   it("exists", () => {
     expect(reverseString).toBeTruthy();
   })
+
+  it ("reverses string", () => {
+    const somme = reverseString('somme');
+    expect(typeof somme).toBe('string');
+    expect(somme).toBe('emmos');
+  })
 })
