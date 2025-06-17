@@ -6,3 +6,7 @@ export function capitalize (string) {
     })
     .join('');
 }
+
+export function reverseString(string) {
+  return Array.from(string).reverse().join('');
+}
