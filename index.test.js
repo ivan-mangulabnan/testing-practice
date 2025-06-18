@@ -42,4 +42,10 @@ describe("calculator", () => {
     expect(calculator.division).toBeTruthy();
     expect(div).toBe(2);
   })
+
+  test("if multiply method works", () => {
+    const prod = calculator.multiply(10, 5);
+    expect(calculator.multiply).toBeTruthy();
+    expect(prod).toBe(50);
+  })
 })
