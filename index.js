@@ -25,3 +25,19 @@ export const calculator = {
     return num1 * num2;
   }
 }
+
+export function caesarCipher (str, key) {
+  const mainArr = Array.from('abcdefghijklmnopqrstuvwxyz');
+
+  let mapped = Array.from(str).map(char => {
+    let regex = /[a-zA-Z]/;
+    if (regex.test(char)) {
+      let newChar = char.toLowerCase();
+      const index = (mainArr.indexOf(newChar) + key) % mainArr.length;
+      return char === char.toUpperCase() ? mainArr[index].toUpperCase() : mainArr[index];
+    }
+    return char;
+  })
+
+  return mapped.join('');
+}
