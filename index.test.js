@@ -36,4 +36,10 @@ describe("calculator", () => {
     expect(calculator.subtract).toBeTruthy();
     expect(diff).toBe(5);
   })
+
+  test("if division method works", () => {
+    const div = calculator.division(10, 5);
+    expect(calculator.division).toBeTruthy();
+    expect(div).toBe(2);
+  })
 })
