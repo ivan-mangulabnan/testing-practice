@@ -30,4 +30,10 @@ describe("calculator", () => {
     expect(calculator.add).toBeTruthy();
     expect(sum1).toBe(4);
   })
+
+  test("if subtract method works", () => {
+    const diff = calculator.subtract(10, 5);
+    expect(calculator.subtract).toBeTruthy();
+    expect(diff).toBe(5);
+  })
 })
