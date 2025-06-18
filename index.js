@@ -17,5 +17,8 @@ export const calculator = {
   },
   subtract: function(num1, num2) {
     return num1 - num2;
+  },
+  division: function(num1, num2) {
+    return num1 / num2;
   }
 }
