@@ -10,3 +10,9 @@ export function capitalize (string) {
 export function reverseString(string) {
   return Array.from(string).reverse().join('');
 }
+
+export const calculator = {
+  add: function(num1, num2) {
+    return num1 + num2;
+  },
+}
