@@ -68,7 +68,27 @@ describe("caesarCipher", () => {
 })
 
 describe("analyzeArray function", () => {
-  test("exists", () => {
+  it("exists", () => {
     expect(analyzeArray).toBeTruthy();
+  })
+
+  const result = analyzeArray([1,8,3,4,2,6]);
+
+  it("returns an object with right properties", () => {
+    expect(result).toHaveProperty('average');
+    expect(result).toHaveProperty('min');
+    expect(result).toHaveProperty('max');
+    expect(result).toHaveProperty('length');
+  })
+
+  it("matches required object", () => {
+    expect(Object.keys(result)).toEqual(['average', 'min', 'max', 'length']);
+  })
+
+  test("if average works as intended", () => {
+    expect(result.average).toBe(4);
+    expect(result.min).toBe(1);
+    expect(result.max).toBe(8);
+    expect(result.length).toBe(6);
   })
 })
