@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, caesarCipher } from "./index.js";
+import { capitalize, reverseString, calculator, caesarCipher, analyzeArray } from "./index.js";
 
 describe("Capitalize function", () => {
 
@@ -64,5 +64,11 @@ describe("caesarCipher", () => {
 
     const result2 = caesarCipher('Hello, World!', 3);
     expect(result2).toBe('Khoor, Zruog!');
+  })
+})
+
+describe("analyzeArray function", () => {
+  test("exists", () => {
+    expect(analyzeArray).toBeTruthy();
   })
 })
