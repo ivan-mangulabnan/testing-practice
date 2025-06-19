@@ -41,3 +41,13 @@ export function caesarCipher (str, key) {
 
   return mapped.join('');
 }
+
+export function analyzeArray (arr) {
+  let sort = arr.sort((a, b) => a - b);
+  let average, min, max, length;
+  average = arr.reduce((total, curr) => total + curr, 0) / arr.length;
+  min = sort[0];
+  max = sort[arr.length - 1];
+  length = arr.length;
+  return { average: average, min, max, length };
+}
